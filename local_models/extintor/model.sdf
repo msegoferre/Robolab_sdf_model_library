@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='Extintor'>
+    <static>true</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://extintor/meshes/collision/collision.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://extintor/meshes/visual/visual.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
