@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.5.0 commit date:2023-03-29, commit time:02:56, hash:1be25cfff18b</authoring_tool>
+    </contributor>
+    <created>2023-05-11T13:36:19</created>
+    <modified>2023-05-11T13:36:19</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Used_Brown_Teak_Wood_Normal-effect">
+      <profile_COMMON>
+        <newparam sid="UsedBrownTeakWood_Base_color_jpg-surface">
+          <surface type="2D">
+            <init_from>UsedBrownTeakWood_Base_color_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="UsedBrownTeakWood_Base_color_jpg-sampler">
+          <sampler2D>
+            <source>UsedBrownTeakWood_Base_color_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="UsedBrownTeakWood_Base_color_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Corcho-effect">
+      <profile_COMMON>
+        <newparam sid="corcho_jpg-surface">
+          <surface type="2D">
+            <init_from>corcho_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="corcho_jpg-sampler">
+          <sampler2D>
+            <source>corcho_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="corcho_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Cristal-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.1679489 0.1679489 0.1679489 1</color>
+            </diffuse>
+            <transparent opaque="A_ONE">
+              <color sid="alpha">0 0 0 0.5590551</color>
+            </transparent>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="UsedBrownTeakWood_Base_color_jpg" name="UsedBrownTeakWood_Base_color_jpg">
+      <init_from>UsedBrownTeakWood_Base_color.jpg</init_from>
+    </image>
+    <image id="corcho_jpg" name="corcho_jpg">
+      <init_from>corcho.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Used_Brown_Teak_Wood_Normal-material" name="Used Brown Teak Wood_Normal">
+      <instance_effect url="#Used_Brown_Teak_Wood_Normal-effect"/>
+    </material>
+    <material id="Corcho-material" name="Corcho">
+      <instance_effect url="#Corcho-effect"/>
+    </material>
+    <material id="Cristal-material" name="Cristal">
+      <instance_effect url="#Cristal-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Tablon_004-mesh" name="Tablon.004">
+      <mesh>
+        <source id="Tablon_004-mesh-positions">
+          <float_array id="Tablon_004-mesh-positions-array" count="60">0.04533547 0.9566727 0.04332727 0.04533547 0.9566727 0.8489268 0.04533559 -0.9566727 0.04332727 0.04533559 -0.9566727 0.8489268 -0.04533559 1 0 -0.04533559 1 0.8922541 -0.04533547 -1 0 -0.04533547 -1 0.8922541 0.04533559 -1 0 0.04533547 1 0 0.04533547 1 0.8922541 0.04533559 -1 0.8922541 -0.0232433 -0.9566727 0.04332727 -0.02324348 0.9566727 0.04332727 -0.02324348 0.9566727 0.8489268 -0.0232433 -0.9566727 0.8489268 0.02779906 0.9737724 0.8554546 0.02779906 0.9737724 0.03701752 0.02779924 -0.9737724 0.8554546 0.02779924 -0.9737724 0.03701752</float_array>
+          <technique_common>
+            <accessor source="#Tablon_004-mesh-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tablon_004-mesh-normals">
+          <float_array id="Tablon_004-mesh-normals-array" count="48">0 0 1 0 -1 0 -1 0 0 0 1 0 0 0 -1 1 0 0 1 0 0 1 0 0 1 -1.20069e-7 0 1 0 0 1 0 0 -1 0 0 1 0 0 1 1.92726e-7 0 1 0 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Tablon_004-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tablon_004-mesh-map">
+          <float_array id="Tablon_004-mesh-map-array" count="180">0.8992911 0.8457675 0.8689768 0 0.8992912 0 0.9696855 0.3944084 0.9296056 0 0.9696855 0 0 0.884072 0.3944084 0 0.3944084 0.884072 0.9696856 0.7888168 0.9296057 0.3944084 0.9696856 0.3944084 0.8288967 0 0.7888168 0.884072 0.7888168 0 0.8689767 0 0.8288968 0.884072 0.8288968 0 0.7696645 0.01915222 0.7888167 0.884072 0.7696645 0.8649197 0.7696645 0.8649197 0.3944084 0.884072 0.4135606 0.8649197 0.4135606 0.8649197 0.3944084 0 0.4135606 0.01915222 0.4135606 0.01915222 0.7888167 0 0.7696645 0.01915222 0.5904201 -1.103423 -0.3097252 2.103423 -0.3097254 -1.103423 0.9696856 0 1 0.356104 0.9696856 0.356104 1 0.7122079 0.9696856 0.356104 1 0.356104 0.8992913 0 0.9296056 0.8457675 0.8992912 0.8457675 0 1 1 0 0 0 0.8992911 0.8457675 0.8689767 0.8457675 0.8689768 0 0.9696855 0.3944084 0.9296056 0.3944084 0.9296056 0 0 0.884072 0 0 0.3944084 0 0.9696856 0.7888168 0.9296057 0.7888168 0.9296057 0.3944084 0.8288967 0 0.8288967 0.884072 0.7888168 0.884072 0.8689767 0 0.8689767 0.884072 0.8288968 0.884072 0.7696645 0.01915222 0.7888167 0 0.7888167 0.884072 0.7696645 0.8649197 0.7888167 0.884072 0.3944084 0.884072 0.4135606 0.8649197 0.3944084 0.884072 0.3944084 0 0.4135606 0.01915222 0.3944084 0 0.7888167 0 0.5904201 -1.103423 0.5904204 2.103423 -0.3097252 2.103423 0.9696856 0 1 0 1 0.356104 1 0.7122079 0.9696856 0.7122079 0.9696856 0.356104 0.8992913 0 0.9296056 0 0.9296056 0.8457675 0 1 1 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#Tablon_004-mesh-map-array" count="90" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Tablon_004-mesh-vertices">
+          <input semantic="POSITION" source="#Tablon_004-mesh-positions"/>
+        </vertices>
+        <triangles material="Used_Brown_Teak_Wood_Normal-material" count="26">
+          <input semantic="VERTEX" source="#Tablon_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Tablon_004-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Tablon_004-mesh-map" offset="2" set="0"/>
+          <p>0 0 0 12 0 1 2 0 2 11 1 3 6 1 4 8 1 5 7 2 6 4 2 7 6 2 8 5 3 9 9 3 10 4 3 11 6 4 12 9 4 13 8 4 14 11 0 15 5 0 16 7 0 17 2 5 18 9 5 19 0 5 20 0 6 21 10 6 22 1 6 23 1 7 24 11 7 25 3 7 26 3 8 27 8 8 28 2 8 29 2 3 33 15 3 34 3 3 35 1 1 36 13 1 37 0 1 38 3 4 39 14 4 40 1 4 41 0 0 45 13 0 46 12 0 47 11 1 48 7 1 49 6 1 50 7 11 51 5 11 52 4 11 53 5 3 54 10 3 55 9 3 56 6 4 57 4 4 58 9 4 59 11 0 60 10 0 61 5 0 62 2 12 63 8 12 64 9 12 65 0 13 66 9 13 67 10 13 68 1 14 69 10 14 70 11 14 71 3 13 72 11 13 73 8 13 74 2 3 78 12 3 79 15 3 80 1 1 81 14 1 82 13 1 83 3 4 84 15 4 85 14 4 86</p>
+        </triangles>
+        <triangles material="Corcho-material" count="2">
+          <input semantic="VERTEX" source="#Tablon_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Tablon_004-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Tablon_004-mesh-map" offset="2" set="0"/>
+          <p>14 9 30 12 9 31 13 9 32 14 9 75 15 9 76 12 9 77</p>
+        </triangles>
+        <triangles material="Cristal-material" count="2">
+          <input semantic="VERTEX" source="#Tablon_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Tablon_004-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Tablon_004-mesh-map" offset="2" set="0"/>
+          <p>18 10 42 17 10 43 16 10 44 18 15 87 19 15 88 17 15 89</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Tablon_004" name="Tablon.004" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Tablon_004-mesh" name="Tablon.004">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Used_Brown_Teak_Wood_Normal-material" target="#Used_Brown_Teak_Wood_Normal-material"/>
+              <instance_material symbol="Corcho-material" target="#Corcho-material"/>
+              <instance_material symbol="Cristal-material" target="#Cristal-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
