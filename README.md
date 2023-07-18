@@ -2,9 +2,9 @@
 This repository contains both the visual (.dae) and collision (.stl) code of various objects used for the simulation of a computer pavilion.
 It is currently available for the following objects:
 
-|     Objects     |     Objectos    |
+|     Objects     |     Objetos     |
 | --------------- | --------------- | 
-|      Bench      |      Banco      | 
+|      bench      |      banco      | 
 |     big_pot     |  maceta grande  |
 |fire extinguisher|     extintor    |
 |      table      |       mesa      |
